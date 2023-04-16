@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+   {% if years_old > 20 %}
+      <h1> you are eligible, you can learn PHP </h1>
+   {% elif years_old > 23 %}
+      <h1> you can learn PHP </h1>
+    {% else %}
+      <h1> you can learn Javascript </h1>
+
+
+   {% endif %}
+    <h3>Welcome to Home {{msg}}</h3>
+
+
+
+<h5>student record</h5>
+<ul>
+   {% for student in student_data %}
+     <li>Student {{student.id}} is {{student.name}} studying {{student.course}} with {{student.score}}%% score</li>
+   {% endfor %}
+</ul>
+{% endblock %}

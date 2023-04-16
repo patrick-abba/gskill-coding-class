@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h3>Welcome to student info page</h3>
+
+<h1>student record {{studs.name}}</h1>
+    <p>Student {{studs.id}} is {{studs.name}} studying {{studs.course}} with {{studs.score}}% score</p>
+<ul>
+     {% for stud in studs %}
+     <li>Student<a href="/student/{{studs.id}}">{{studs.name}}</a></li>
+     {% endfor %}
+</ul>
+
+{% endblock %}
